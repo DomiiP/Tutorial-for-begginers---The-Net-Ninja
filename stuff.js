@@ -42,4 +42,4 @@ module.exports = {
 };
 }
 
-// ---- Video 6 (Modules and require()) + Video 7 (Module Patterns) - with app.js
+// ---- End of Video 6 (Modules and require()) + Video 7 (Module Patterns) - with app.js

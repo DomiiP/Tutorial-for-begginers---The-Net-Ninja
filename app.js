@@ -34,4 +34,4 @@ people.forEach(function(person){ //forEach is just javaScript function
 james.emit('speak','hey dudes');
 ryu.emit('speak','I want a kebab');
 
-// ---- Video 8 (The Node Event Emitter)
+// ---- End of Video 8 (The Node Event Emitter)
