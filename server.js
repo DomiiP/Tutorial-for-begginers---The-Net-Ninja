@@ -38,6 +38,7 @@ myReadStream.on('data', function(chunk){
 
 //myReadStream.pipe(myWriteStream);
 
+if(false){
 var server = http.createServer(function(req,res){ // res (response object) is a writable stream
     console.log('request was made: ' + req.url);
     res.writeHead(200, {'Content.Type': 'text/html'}); 
@@ -46,10 +47,25 @@ var server = http.createServer(function(req,res){ // res (response object) is a 
 });
 
 server.listen(3000, '127.0.0.1'); 
-console.log('yo, now listen to port 3000');
+console.log('yo, now listen to port 3000');}
 
 // ---- End of Video 16 (Pipes)
 
 //changed text-file from text/plain to text/html
 
 // ---- End of Video 17 (Serving HTML Pages)
+
+var server = http.createServer(function(req,res){
+    console.log('request was made: ' + req.url);
+    res.writeHead(200, {'Content.Type': 'application/json'}); 
+    var myObj = {
+        name : 'Ryu',
+        job  : 'Ninja',
+        age  : 29
+    };
+    //res.end(myObj); // - this doesn't work becuase end wants string or buffer
+    res.end(JSON.stringify(myObj));
+});
+
+server.listen(3000, '127.0.0.1'); 
+console.log('yo, now listen to port 3000');
