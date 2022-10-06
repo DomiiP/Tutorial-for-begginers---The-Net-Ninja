@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tutorial-for-begginers---the-net-ninja",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam maecenas ultricies mi eget. Morbi tempus iaculis urna id. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Ante metus dictum at tempor commodo ullamcorper a. Placerat orci nulla pellentesque dignissim enim. Sed blandit libero volutpat sed cras ornare arcu dui vivamus. Mauris commodo quis imperdiet massa tincidunt nunc. Phasellus vestibulum lorem sed risus. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. In ornare quam viverra orci sagittis. Quis imperdiet massa tincidunt nunc pulvinar sapien. Elit ut aliquam purus sit amet luctus. Facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris. Ut venenatis tellus in metus vulputate eu scelerisque.",
+  "version": "1.0.0",
+  "main": "Fun project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DomiiP/Tutorial-for-begginers---The-Net-Ninja.git"
+  },
+  "keywords": [
+    "Fun"
+  ],
+  "author": "Me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DomiiP/Tutorial-for-begginers---The-Net-Ninja/issues"
+  },
+  "homepage": "https://github.com/DomiiP/Tutorial-for-begginers---The-Net-Ninja#readme",
+  "dependencies": {
+    "-": "^0.0.1",
+    "save": "^2.9.0"
+  }
+}

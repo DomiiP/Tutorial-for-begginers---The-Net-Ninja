@@ -1,0 +1,17 @@
+ The node package helps perfom certain type of text
+ Express - Helps with routing and templating
+ Node Package Manager - publish, download packages.. (npm)
+
+ We can install express with 'npm install express'
+ We can uninstall with 'npm uninstall express'
+ Both commands are used in terminal
+
+ ---- End of Video 20 (The Node Package Manager)
+
+ Command 'npm init' will make package to your project
+
+ Command 'npm install express - save' will put it in package.json as dependency
+ With command 'npm uninstall express' we create problem, because it is still in dependencies
+ Now command 'npm install' will install all needed files on dependencies
+
+ ---- End of Video 21 (The package.json File)
