@@ -15,3 +15,11 @@
  Now command 'npm install' will install all needed files on dependencies
 
  ---- End of Video 21 (The package.json File)
+
+ Nodemon - Package for developing; monitor application files if it changes
+ Instillation - 'npm install -g nodemon' // '-g' means it is globally installed (can be used for any application)
+ Instead of typing 'node server', you can type 'nodemon server.js'
+ You should be able to run it with 'nodemon server.js' but for some security reasons, it does not work..?
+ So basically when you change something that runs with nodemon, it would automatically restart due to changes..
+
+ ---- End of Video 22 (Installing Nodemon)
