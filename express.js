@@ -43,22 +43,38 @@ app.get('/profile/:name',function(req,res){ // We can ID in database (make a dat
 // ---- End of Video 24 (Express Route Params)
 
 // This is how you load pages easily
+// Changed res.sendFile to res.render for tutorial n27
 app.get('/',function(req,res){ 
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 app.get('/contact',function(req,res){ 
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact');
 })
 
 // Installing ejs with 'npm install ejs - save'
 // ejs - view / template engine to set variables into different templates
 
-
+if (false){
 app.get('/profile/:name',function(req,res){
     var data = {age: 29, job: 'ninja'};
     res.render('profile', {person: req.params.name, data: data}); // We render a view by template engines
     // With parameters we can send data to the template
 }); 
-app.listen(3000);
+app.listen(3000);}
 
 // ---- End of Video 25 (Template Engines)
+
+app.get('/profile/:name',function(req,res){
+    var data = {age: 29, job: 'ninja', hobbies: ['eating','fishing','fighting']};
+    res.render('profile', {person: req.params.name, data : data});
+    // Also updated profile.ejs, but i don't want to try if to stop that
+}); 
+app.listen(3000);
+// ---- End of Video 26 (Template Engines - part 2)
+
+// Created partials folder and navigation file for partial views
+// Also included a partial view in main view (nav --> profile)
+
+//Everythings starts to break with '<% include partials/nav.ejs %>' - have to fix it..
+
+// ---- End of Video 27 (Partial Templates)
