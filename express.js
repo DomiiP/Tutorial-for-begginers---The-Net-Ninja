@@ -10,6 +10,22 @@ app.set('view engine', 'ejs'); // Express knows that we use ejs as view engine
 // By default, it is going to look at ./views folder for data
 // ---------------------------------------------------
 
+// ---------------------------------------------------
+// - This is from  TUTORIAL #28, but has to be pased here
+
+/*
+app.use('/assets', function(req,res, next){ // next - used for poiting out next middleware
+    console.log(req.url);
+    next();
+    // If you type localhost:3000/assets, it's going to output '/'
+    // But if you type localhost:3000/contact, it's not going to output anything, since it doesn't match
+    // the middleware
+});*/
+app.use('/assets', express.static('assets'));
+// First parameter is linking the route, the second one is linking the directory
+// ---------------------------------------------------
+
+
 
 if(false){
 app.get('/',function(req,res){ //function(req,res) is extended in express with additional functionality
@@ -48,7 +64,8 @@ app.get('/',function(req,res){
     res.render('index');
 });
 app.get('/contact',function(req,res){ 
-    res.render('contact');
+    //res.render('contact'); - This is changed for Tutorial n29
+    res.render('contact', {qs: req.query}); // We pass any data from query string to 'contact' view
 })
 
 // Installing ejs with 'npm install ejs - save'
@@ -59,7 +76,7 @@ app.get('/profile/:name',function(req,res){
     var data = {age: 29, job: 'ninja'};
     res.render('profile', {person: req.params.name, data: data}); // We render a view by template engines
     // With parameters we can send data to the template
-}); 
+    }); 
 app.listen(3000);}
 
 // ---- End of Video 25 (Template Engines)
@@ -78,3 +95,12 @@ app.listen(3000);
 //Everythings starts to break with '<% include partials/nav.ejs %>' - have to fix it..
 
 // ---- End of Video 27 (Partial Templates)
+
+// Middleware - code that runs between a request and a response
+// Added styles.css 
+// ---- End of Video 28 (Middleware & Static Files)
+
+// Changed contact.ejs and something on line 66/67 
+// Fixed bots css and include .ejs files
+
+// ---- End of Video 29 (Query Strings)
