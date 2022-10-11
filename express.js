@@ -2,6 +2,8 @@
 // Installed express agian (npm install express, you can also npm install express - save)
 var express = require('express'); // Module
 var app = express();
+var bodyParser = require('body-parser'); // Tutorial number 30
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 // ---------------------------------------------------
 // - This is from  TUTORIAL #25, but has to be pased here
@@ -68,6 +70,13 @@ app.get('/contact',function(req,res){
     res.render('contact', {qs: req.query}); // We pass any data from query string to 'contact' view
 })
 
+app.post('/contact', urlencodedParser, function(req,res){  //This is tutorial number 30
+    // Used for posting data from form 
+    // When we hit submit on the form, it's going to fire post handler, it's going to parse data of the body
+    // and give us the acces to the data and we going to parse it back
+    res.render('contact-sucess', {data: req.body}); // Now we are going to have data 'req.body' acceses in view 'contact-success'
+})
+
 // Installing ejs with 'npm install ejs - save'
 // ejs - view / template engine to set variables into different templates
 
@@ -104,3 +113,11 @@ app.listen(3000);
 // Fixed bots css and include .ejs files
 
 // ---- End of Video 29 (Query Strings)
+
+// POST - request method, ask server to accept/store data which is enclosed in the body of the request (forms)
+
+// Changed contact.ejs
+// Installed body-parser with command 'npm install body-parser'
+
+
+// ---- End of Video 30 (Post Requests)
